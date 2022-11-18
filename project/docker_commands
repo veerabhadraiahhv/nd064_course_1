@@ -1,11 +1,49 @@
 ## Docker commands used to build the application 
-# TODO: insert the docker build command
+docker build -t techtrends .
 
 ## Docker commands used to run the application
-# TODO: insert the docker run command
+docker run -d -p 7111:3111 techtrends
 
 ## Docker commands used to get the application logs
-# TODO: insert the docker logs command
-
-## Logs from the container running the TechTrends application
-# TODO: paste logs from the Docker container 
+# docker logs -f 801ead144010
+##  Logs from the container running the TechTrends application
+##  * Serving Flask app 'app' (lazy loading)
+##  * Environment: production
+##    WARNING: This is a development server. Do not use it in a production deployment.
+##    Use a production WSGI server instead.
+##  * Debug mode: off
+## 08/10/2022 08:16:27  * Running on all addresses.
+##    WARNING: This is a development server. Do not use it in a production deployment.
+## 08/10/2022 08:16:27  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET / HTTP/1.1" 200 -
+## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET /favicon.ico HTTP/1.1" 404 -
+## 08/10/2022 08:17:17 Article CNCF Cloud Native Interactive Landscape retrieved !
+## 08/10/2022 08:17:17 172.17.0.1 - - [08/Oct/2022 08:17:17] "GET /4 HTTP/1.1" 200 -
+## 08/10/2022 08:17:17 172.17.0.1 - - [08/Oct/2022 08:17:17] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:20 172.17.0.1 - - [08/Oct/2022 08:17:20] "GET /healthz HTTP/1.1" 200 -
+## 08/10/2022 08:17:20 172.17.0.1 - - [08/Oct/2022 08:17:20] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:21 172.17.0.1 - - [08/Oct/2022 08:17:21] "GET /create HTTP/1.1" 200 -
+## 08/10/2022 08:17:21 172.17.0.1 - - [08/Oct/2022 08:17:21] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:22 172.17.0.1 - - [08/Oct/2022 08:17:22] "GET /metrics HTTP/1.1" 200 -
+## 08/10/2022 08:17:22 172.17.0.1 - - [08/Oct/2022 08:17:22] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:23 The About Us page is retrieved
+## 08/10/2022 08:17:23 172.17.0.1 - - [08/Oct/2022 08:17:23] "GET /about HTTP/1.1" 200 -
+## 08/10/2022 08:17:23 172.17.0.1 - - [08/Oct/2022 08:17:23] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 08:17:25 172.17.0.1 - - [08/Oct/2022 08:17:25] "GET / HTTP/1.1" 200 -
+## 08/10/2022 08:17:25 172.17.0.1 - - [08/Oct/2022 08:17:25] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 09:17:00 Article KubeCon + CloudNativeCon 2021 retrieved !
+## 08/10/2022 09:17:00 172.17.0.1 - - [08/Oct/2022 09:17:00] "GET /2 HTTP/1.1" 200 -
+## 08/10/2022 09:17:00 172.17.0.1 - - [08/Oct/2022 09:17:00] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 09:17:03 172.17.0.1 - - [08/Oct/2022 09:17:03] "GET /create HTTP/1.1" 200 -
+## 08/10/2022 09:17:03 172.17.0.1 - - [08/Oct/2022 09:17:03] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 09:17:11 Article XYZ Created !
+## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "POST /create HTTP/1.1" 302 -
+## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "GET / HTTP/1.1" 200 -
+## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 09:17:14 Article XYZ retrieved !
+## 08/10/2022 09:17:14 172.17.0.1 - - [08/Oct/2022 09:17:14] "GET /9 HTTP/1.1" 200 -
+## 08/10/2022 09:17:14 172.17.0.1 - - [08/Oct/2022 09:17:14] "GET /static/css/main.css HTTP/1.1" 304 -
+## 08/10/2022 09:17:17 No Article retrieved with post id !10
+## 08/10/2022 09:17:17 172.17.0.1 - - [08/Oct/2022 09:17:17] "GET /10 HTTP/1.1" 404 -
+## 08/10/2022 09:17:17 172.17.0.1 - - [08/Oct/2022 09:17:17] "GET /static/css/main.css HTTP/1.1" 304 -
