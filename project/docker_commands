@@ -1,49 +1,84 @@
-## Docker commands used to build the application 
-docker build -t techtrends .
-
-## Docker commands used to run the application
-docker run -d -p 7111:3111 techtrends
-
-## Docker commands used to get the application logs
-# docker logs -f 801ead144010
-##  Logs from the container running the TechTrends application
+## docker build -t techtrends .
+## [+] Building 45.3s (10/10) FINISHED
+##  => [internal] load build definition from Dockerfile                                                               0.0s
+##  => => transferring dockerfile: 32B                                                                                0.0s
+##  => [internal] load .dockerignore                                                                                  0.0s
+##  => => transferring context: 2B                                                                                    0.0s
+##  => [internal] load metadata for docker.io/library/python:3.8                                                      6.4s
+##  => [auth] library/python:pull token for registry-1.docker.io                                                      0.0s
+##  => [internal] load build context                                                                                  0.1s
+##  => => transferring context: 54.87kB                                                                               0.1s
+##  => [1/4] FROM docker.io/library/python:3.8@sha256:89986864f936860f6e74a7540ab98b23586011e90482b09125aa6792f2ea0  30.9s
+##  => => resolve docker.io/library/python:3.8@sha256:89986864f936860f6e74a7540ab98b23586011e90482b09125aa6792f2ea01  0.0s
+##  => => sha256:89986864f936860f6e74a7540ab98b23586011e90482b09125aa6792f2ea0195 1.86kB / 1.86kB                     0.0s
+##  => => sha256:bb2a37b016b169c2d65f4203e15e855f77261353011810c18f2e6a080e2539e0 2.22kB / 2.22kB                     0.0s
+##  => => sha256:928a35165ae5962a607ad2c8ab5e0509adfce8e36cc329d06c35ce1dac1728ec 8.56kB / 8.56kB                     0.0s
+##  => => sha256:a8ca11554fce00d9177da2d76307bdc06df7faeb84529755c648ac4886192ed1 55.04MB / 55.04MB                   3.9s
+##  => => sha256:e4e46864aba2e62ba7c75965e4aa33ec856ee1b1074dda6b478101c577b63abd 5.16MB / 5.16MB                     3.8s
+##  => => sha256:c85a0be79bfba309d1f05dc40b447aa82b604593531fed1e7e12e4bef63483a5 10.88MB / 10.88MB                   3.6s
+##  => => sha256:195ea6a58ca87a18477965a6e6a8623112bde82c5b568a29c56ce4581b6e6695 54.59MB / 54.59MB                  15.3s
+##  => => sha256:157f16ed0a0c119e5015d22d95fd158bf9e85654611b870b79cca3987442948b 196.87MB / 196.87MB                22.7s
+##  => => sha256:884b144bec286b456b1cd694ccd6adc07c3619b3b84069c4ec575fe213e94a7e 6.29MB / 6.29MB                     5.7s
+##  => => extracting sha256:a8ca11554fce00d9177da2d76307bdc06df7faeb84529755c648ac4886192ed1                         10.4s
+##  => => sha256:8f3927bafdf36ffbfb6a123c26b4987a63c0cab7ff3c4466247554e6cc978652 17.40MB / 17.40MB                  11.7s
+##  => => sha256:f53d27ef4a90037298b4dcfcdee7272a830e15c28c37a75768643c9731a34218 233B / 233B                        13.5s
+##  => => sha256:0883f609470d84de69c8e5a06862337d33a26f4286da036bfa83aa338776dc46 2.89MB / 2.89MB                    15.2s
+##  => => extracting sha256:e4e46864aba2e62ba7c75965e4aa33ec856ee1b1074dda6b478101c577b63abd                          0.7s
+##  => => extracting sha256:c85a0be79bfba309d1f05dc40b447aa82b604593531fed1e7e12e4bef63483a5                          0.9s
+##  => => extracting sha256:195ea6a58ca87a18477965a6e6a8623112bde82c5b568a29c56ce4581b6e6695                          3.9s
+##  => => extracting sha256:157f16ed0a0c119e5015d22d95fd158bf9e85654611b870b79cca3987442948b                          6.3s
+##  => => extracting sha256:884b144bec286b456b1cd694ccd6adc07c3619b3b84069c4ec575fe213e94a7e                          0.2s
+##  => => extracting sha256:8f3927bafdf36ffbfb6a123c26b4987a63c0cab7ff3c4466247554e6cc978652                          0.6s
+##  => => extracting sha256:f53d27ef4a90037298b4dcfcdee7272a830e15c28c37a75768643c9731a34218                          0.0s
+##  => => extracting sha256:0883f609470d84de69c8e5a06862337d33a26f4286da036bfa83aa338776dc46                          0.2s
+##  => [2/4] COPY . /app                                                                                              0.2s
+##  => [3/4] WORKDIR /app                                                                                             0.1s
+##  => [4/4] RUN pip install -r requirements.txt                                                                      7.4s
+##  => exporting to image                                                                                             0.2s
+##  => => exporting layers                                                                                            0.2s
+##  => => writing image sha256:984654e1d95882dc32abdf2c3f00341c23df59615510d1bf522da524002091cf                       0.0s
+##  => => naming to docker.io/library/techtrends                                                                      0.0s
+## 
+## Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+## 
+## docker run -d -p 7111:3111 techtrends
+## 93535e67ec2c11c30a2dbea4863e6106c1fcf2ac0e17eb734ff45f6d908c4419
+## 
+## docker logs -f funny_wilson
 ##  * Serving Flask app 'app' (lazy loading)
 ##  * Environment: production
 ##    WARNING: This is a development server. Do not use it in a production deployment.
 ##    Use a production WSGI server instead.
 ##  * Debug mode: off
-## 08/10/2022 08:16:27  * Running on all addresses.
+## 22/11/2022 06:07:28  * Running on all addresses.
 ##    WARNING: This is a development server. Do not use it in a production deployment.
-## 08/10/2022 08:16:27  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET / HTTP/1.1" 200 -
-## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:12 172.17.0.1 - - [08/Oct/2022 08:17:12] "GET /favicon.ico HTTP/1.1" 404 -
-## 08/10/2022 08:17:17 Article CNCF Cloud Native Interactive Landscape retrieved !
-## 08/10/2022 08:17:17 172.17.0.1 - - [08/Oct/2022 08:17:17] "GET /4 HTTP/1.1" 200 -
-## 08/10/2022 08:17:17 172.17.0.1 - - [08/Oct/2022 08:17:17] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:20 172.17.0.1 - - [08/Oct/2022 08:17:20] "GET /healthz HTTP/1.1" 200 -
-## 08/10/2022 08:17:20 172.17.0.1 - - [08/Oct/2022 08:17:20] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:21 172.17.0.1 - - [08/Oct/2022 08:17:21] "GET /create HTTP/1.1" 200 -
-## 08/10/2022 08:17:21 172.17.0.1 - - [08/Oct/2022 08:17:21] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:22 172.17.0.1 - - [08/Oct/2022 08:17:22] "GET /metrics HTTP/1.1" 200 -
-## 08/10/2022 08:17:22 172.17.0.1 - - [08/Oct/2022 08:17:22] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:23 The About Us page is retrieved
-## 08/10/2022 08:17:23 172.17.0.1 - - [08/Oct/2022 08:17:23] "GET /about HTTP/1.1" 200 -
-## 08/10/2022 08:17:23 172.17.0.1 - - [08/Oct/2022 08:17:23] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 08:17:25 172.17.0.1 - - [08/Oct/2022 08:17:25] "GET / HTTP/1.1" 200 -
-## 08/10/2022 08:17:25 172.17.0.1 - - [08/Oct/2022 08:17:25] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 09:17:00 Article KubeCon + CloudNativeCon 2021 retrieved !
-## 08/10/2022 09:17:00 172.17.0.1 - - [08/Oct/2022 09:17:00] "GET /2 HTTP/1.1" 200 -
-## 08/10/2022 09:17:00 172.17.0.1 - - [08/Oct/2022 09:17:00] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 09:17:03 172.17.0.1 - - [08/Oct/2022 09:17:03] "GET /create HTTP/1.1" 200 -
-## 08/10/2022 09:17:03 172.17.0.1 - - [08/Oct/2022 09:17:03] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 09:17:11 Article XYZ Created !
-## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "POST /create HTTP/1.1" 302 -
-## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "GET / HTTP/1.1" 200 -
-## 08/10/2022 09:17:11 172.17.0.1 - - [08/Oct/2022 09:17:11] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 09:17:14 Article XYZ retrieved !
-## 08/10/2022 09:17:14 172.17.0.1 - - [08/Oct/2022 09:17:14] "GET /9 HTTP/1.1" 200 -
-## 08/10/2022 09:17:14 172.17.0.1 - - [08/Oct/2022 09:17:14] "GET /static/css/main.css HTTP/1.1" 304 -
-## 08/10/2022 09:17:17 No Article retrieved with post id !10
-## 08/10/2022 09:17:17 172.17.0.1 - - [08/Oct/2022 09:17:17] "GET /10 HTTP/1.1" 404 -
-## 08/10/2022 09:17:17 172.17.0.1 - - [08/Oct/2022 09:17:17] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:07:28  * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
+## 22/11/2022 06:08:06 172.17.0.1 - - [22/Nov/2022 06:08:06] "GET / HTTP/1.1" 200 -
+## 22/11/2022 06:08:06 172.17.0.1 - - [22/Nov/2022 06:08:06] "GET /static/css/main.css HTTP/1.1" 200 -
+## 22/11/2022 06:08:06 172.17.0.1 - - [22/Nov/2022 06:08:06] "GET /favicon.ico HTTP/1.1" 404 -
+## 22/11/2022 06:08:13 The About Us page is retrieved
+## 22/11/2022 06:08:13 172.17.0.1 - - [22/Nov/2022 06:08:13] "GET /about HTTP/1.1" 200 -
+## 22/11/2022 06:08:13 172.17.0.1 - - [22/Nov/2022 06:08:13] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:15 172.17.0.1 - - [22/Nov/2022 06:08:15] "GET /metrics HTTP/1.1" 200 -
+## 22/11/2022 06:08:15 172.17.0.1 - - [22/Nov/2022 06:08:15] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:17 172.17.0.1 - - [22/Nov/2022 06:08:17] "GET /healthz HTTP/1.1" 200 -
+## 22/11/2022 06:08:17 172.17.0.1 - - [22/Nov/2022 06:08:17] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:18 172.17.0.1 - - [22/Nov/2022 06:08:18] "GET /create HTTP/1.1" 200 -
+## 22/11/2022 06:08:18 172.17.0.1 - - [22/Nov/2022 06:08:18] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:28 Article New Post Created !
+## 22/11/2022 06:08:28 172.17.0.1 - - [22/Nov/2022 06:08:28] "POST /create HTTP/1.1" 302 -
+## 22/11/2022 06:08:28 172.17.0.1 - - [22/Nov/2022 06:08:28] "GET / HTTP/1.1" 200 -
+## 22/11/2022 06:08:28 172.17.0.1 - - [22/Nov/2022 06:08:28] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:30 Article New Post retrieved !
+## 22/11/2022 06:08:30 172.17.0.1 - - [22/Nov/2022 06:08:30] "GET /9 HTTP/1.1" 200 -
+## 22/11/2022 06:08:31 172.17.0.1 - - [22/Nov/2022 06:08:31] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:35 No Article retrieved with post id !10
+## 22/11/2022 06:08:35 172.17.0.1 - - [22/Nov/2022 06:08:35] "GET /10 HTTP/1.1" 404 -
+## 22/11/2022 06:08:35 172.17.0.1 - - [22/Nov/2022 06:08:35] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:08:37 The About Us page is retrieved
+## 22/11/2022 06:08:37 172.17.0.1 - - [22/Nov/2022 06:08:37] "GET /about HTTP/1.1" 200 -
+## 22/11/2022 06:08:37 172.17.0.1 - - [22/Nov/2022 06:08:37] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:11:40 172.17.0.1 - - [22/Nov/2022 06:11:40] "GET /metrics HTTP/1.1" 200 -
+## 22/11/2022 06:11:40 172.17.0.1 - - [22/Nov/2022 06:11:40] "GET /static/css/main.css HTTP/1.1" 304 -
+## 22/11/2022 06:11:43 172.17.0.1 - - [22/Nov/2022 06:11:43] "GET /healthz HTTP/1.1" 200 -
+## 22/11/2022 06:11:43 172.17.0.1 - - [22/Nov/2022 06:11:43] "GET /static/css/main.css HTTP/1.1" 304 -
