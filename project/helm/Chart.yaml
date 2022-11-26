@@ -3,6 +3,7 @@ name: techtrends
 description: Tech Trends Blog application
 keywords:
 - techtrends 
+- latest
 version: 1.0.0
 maintainers:
 - name: veerabhadraiahhv 
