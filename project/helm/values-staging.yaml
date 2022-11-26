@@ -21,4 +21,4 @@ resources:
     cpu: 500m
 
 configmap:
-  data: "version: 1.18.0"
+  data: "version: latest"
